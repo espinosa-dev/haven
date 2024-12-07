@@ -1,0 +1,135 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #000;
+    text-align: center;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 10px;
+}
+
+nav {
+    display: flex;
+    padding: 22px 0;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    
+}
+
+/* Menú */
+.pages {
+    display: block;
+    gap: 2rem;
+}
+
+.pages a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    padding: 0.5rem;
+}
+
+.pages a.active {
+    color: #000000;
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+.pages a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; /* Ajusta la distancia desde el texto */
+    left: 50%; /* Centra el pseudo-elemento */
+    transform: translateX(-50%); /* Centrado perfecto */
+    width: 50%; /* Ajusta el largo de la línea (porcentaje o píxeles) */
+    height: 4px; /* Grosor de la línea */
+    background-color: #0084ff;
+    border-radius: 2px; /* Hace que los bordes sean redondeados */
+}
+
+/* Botones de autenticación */
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.auth-buttons .login {
+    background-color: #d6e4ff;
+    color: #000;
+}
+
+.auth-buttons .register {
+    background-color: transparent;
+    color: #000;
+}
+
+/* Logo Section */
+.logo-section {
+    margin-top: 10rem;
+}
+
+.logo-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.logo-section .logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Menu Section */
+.menu {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    width: 80%;
+    margin: 2rem auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menu-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.menu-item p {
+    font-weight: bold;
+    color: #555;
+}
